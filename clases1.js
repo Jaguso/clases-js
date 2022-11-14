@@ -80,7 +80,7 @@ listaDeNombres[1]
 
 //////////////////////////////
 
-// Detalles de number
+// NUMBER
 
 var a = 4;
 var b = 3;
@@ -94,3 +94,47 @@ console.log(b-a)
 
 b ** a // quiere decir b elevado a la a 
 console.log(b**a)
+
+
+console.log(Math.abs(4))
+console.log(Math.abs(-10))
+
+// ceil() - ceiling(techo) floor() (piso)
+
+Math.floor(11.233) // --> 11
+Math.ceil(11.233) // --> 12
+
+console.log(Math.floor(11.233))
+console.log(Math.ceil(11.233))
+
+// 
+
+console.log(Math.max(...[23,2,44,35]))
+console.log(Math.min(23,2,44,35))
+
+var arreglo = [2,5,21,12,98,5]
+console.log(Math.max(...arreglo))
+
+// Operación de numeros: %
+console.log(20%5)  // divide 20/5 y regresa el residuo
+
+// 8%3 -> 2
+// 111 111 11
+
+/////////////////////////////
+
+// STRINGS
+
+var word = 'azul'
+console.log(word.toUpperCase())
+
+// length
+console.log(word.length)
+
+// toUpperCase()
+word.toUpperCase() // --> AZUL
+
+// toLowerCase()
+var str = 'Pepe Pecas Pica Papas'
+console.log(str.toLowerCase())
+str.toLowerCase() // pepe pecas pica papas
