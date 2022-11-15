@@ -123,13 +123,15 @@ console.log(20%5)  // divide 20/5 y regresa el residuo
 
 /////////////////////////////
 
+
+
 // STRINGS
 
 var word = 'azul'
 console.log(word.toUpperCase())
 
 // length
-console.log(word.length)
+console.log(word.length) // --> 4 (la longitud de word)
 
 // toUpperCase()
 word.toUpperCase() // --> AZUL
@@ -138,3 +140,63 @@ word.toUpperCase() // --> AZUL
 var str = 'Pepe Pecas Pica Papas'
 console.log(str.toLowerCase())
 str.toLowerCase() // pepe pecas pica papas
+
+// Con + se concatena (pega strings)
+var str1 = 'Jose es '
+var str2 = 'alto'
+
+console.log(str1 + str2)
+
+
+// slice()
+var str = 'Juan come pastel'
+console.log(str.slice(0,3)) // --> 'Jua'
+console.log(str.slice(2,5))
+
+
+
+
+// ARRAYS
+
+// Cómo acceder a un elemento de un arreglo
+var arr = ['Jose', 11, 'Luis', 14, 2, 5]
+arr[2] // --> 'Luis'
+arr[0] // --> 'Jose'
+
+console.log(arr[2])
+console.log(arr[0])
+
+
+// length - calcula la longitud del arreglo
+var arr = ['Jose', 11, 'Luis', 14, 2, 5]
+arr.length // --> 6
+console.log(arr.length)
+
+// "+" toma dos arreglos, los junta y hace todo un string 
+
+var arr1 = ['Jose', 11, 'Luis', 14, 2, 5]
+var arr2 = ['manzana', 'pera', 2]
+
+
+arr1 + arr2 // --> Jose,11,Luis,14,2,5manzana,pera,2   y es un string
+console.log(arr1+arr2)
+
+// .concat() es para concatenar arreglos
+var arr1 = ['Jose', 11, 'Luis', 14, 2, 5]
+var arr2 = ['manzana', 'pera', 2]
+
+arr1.concat(arr2) // --> ['Jose', 11, 'Luis', 14, 2, 5, 'manzana', 'pera', 2]
+arr2.concat(arr1) // --> ['manzana', 'pera', 2, 'Jose', 11, 'Luis', 14, 2, 5]
+
+console.log(arr1.concat(arr2))
+console.log(arr2.concat(arr1))
+
+
+// .slice() funciona igual para arrays que para strings
+
+var arr = ['Jose', 11, 'Luis', 14, 2, 'pera']
+arr.slice(0,5) // --> ['Jose', 11, 'Luis', 14, 2]
+arr.slice(1,4) // --> [11, 'Luis', 14]
+console.log(arr.slice(0,5))
+console.log(arr.slice(1,4))
+
