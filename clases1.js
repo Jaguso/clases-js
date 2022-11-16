@@ -200,3 +200,98 @@ arr.slice(1,4) // --> [11, 'Luis', 14]
 console.log(arr.slice(0,5))
 console.log(arr.slice(1,4))
 
+
+
+// .indexOf() te dice que índice tiene un elemento del arreglo
+var arr = ['Jose', 11, 'Luis', 14, 2, 'pera']
+arr.indexOf('Luis') // --> 2
+console.log(arr.indexOf(11)) // -->1
+console.log(arr.indexOf('pera')) // --> 5
+
+// si un valor se repite, arroja el índice de la primera vez que aparece
+var arr = ['Jose', 11, 'Luis', 14, 2, 'pera', 'Jose']
+console.log(arr.indexOf('Jose'))
+
+/////////////////////////////
+
+// OPERADORES BOOLEANOS
+
+// un condicional tiene esta estructura
+
+// if (un booleano) {
+//     // lo que quieres que se ejecute si el booleano es true
+// }
+
+// Los signos de igualdad o desigualdad
+
+// Operacion de igualdad ("==" o "===")
+
+a == b // --> regresa un boolean (true o false) 
+
+var a = 5;
+var b = 6;
+
+var areEqual = (a == b);
+console.log(areEqual)
+
+var areNotEqual = (a != b);
+console.log(areNotEqual)
+
+
+// ==, !=, ===, !== <--- notación
+
+var a = 7
+var b = '7'
+
+var areEqual = (a === b)
+console.log(areEqual)
+
+
+// operadores de desigualdad
+
+var a = 7
+var b = 8
+
+// "<" menor que
+var compare = (a < b)
+console.log(compare)
+
+// ">" menor que
+var compare = (a > b)
+console.log(compare)
+
+// "<=" menor o igual que
+var a = 7
+var b = 7
+var compare = (a <= b)
+console.log(compare)
+
+// ">=" mayor o igual que
+var compare = (a >= b)
+console.log(compare)
+
+
+// Operadores condicionales (&& y ||)
+
+// operador &&
+
+var a = 7
+var b = 8
+var c = 2
+var d = 1
+
+var comparacion = ((a<b) && (c>d))
+console.log(comparacion)
+
+// tabla de verdad de && (operador "y")
+// true && true --> true
+// true && false --> false
+// false && true --> false
+// false && false --> false
+
+
+// tabla de verdad de || (operador "o")
+// true || true --> true
+// true || false --> true
+// false || true --> true
+// false || false --> false
