@@ -256,7 +256,7 @@ var b = 8
 var compare = (a < b)
 console.log(compare)
 
-// ">" menor que
+// ">" mayor que
 var compare = (a > b)
 console.log(compare)
 
@@ -295,3 +295,23 @@ console.log(comparacion)
 // true || false --> true
 // false || true --> true
 // false || false --> false
+
+
+// ejemplo del operador ||
+// Con este operador podemos definir ">="
+(x >= y) //  es lo mismo que (x>y || x===y) 
+
+var x = 5
+var y = 10
+
+var comparacion = (x<y || y>0) // --> true
+
+(x<y && y<0) // --> (true && false) --> false
+
+((x===y || x>0) && (x>2 && y<0)) // --> ((false || true) && (true && false))
+// --> (true && false) --> false
+
+
+(((x>=y) && y<10) || ((x-y<0 && y>2) || (x>=5 && y<0)))
+
+
