@@ -313,5 +313,38 @@ var comparacion = (x<y || y>0) // --> true
 
 
 (((x>=y) && y<10) || ((x-y<0 && y>2) || (x>=5 && y<0)))
+// ((false && false) || ((true && true) || (true && false)))
+// (false || (true || false))
+// (false || true) 
+// true
 
+// Un operador booleano, solo se aplica a dos valores, usamos paréntesis para aplicarlo a mas de 2
+// bool && (bool || bool) !== (bool || bool) || bool
 
+var x = 5
+var y = 10
+console.log(((x>=y) && y<10) || ((x-y<0 && y>2) || (x>=5 && y<0)))
+
+//////
+// Notacion de condicionales
+
+var x = -2;
+var y = 12
+
+if (x>0) {
+    console.log(x)
+} else {
+    console.log('negativo')
+}
+
+var x = 20
+
+if (5>x>0) {
+    console.log(x)
+} else if (10>x>5) {
+    console.log('mayor que 5')
+} else if (x>10) {
+    console.log('mayor que 10')
+} else {
+    console.log('negativo')
+}
