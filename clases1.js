@@ -348,3 +348,58 @@ if (5>x>0) {
 } else {
     console.log('negativo')
 }
+
+
+var x = 20;
+
+switch(x) {
+    case 0<x<5:
+        console.log(x);
+    case 5<x<10:
+        console.log('mayor que 5');
+    case x>10:
+        console.log('mayor que 10');
+    default:
+        console.log('negativo o 5');
+}
+
+
+// Notaciones para definir varialbes
+
+var number = 16;
+
+let number = 16;
+const number = 16;
+
+
+var x = 11
+
+if (x>10) {
+    // let y = 20;
+    var y = 20;
+}
+
+console.log(y)
+
+
+let x = 16;
+const y = 20;
+
+x = x*2
+y = y*2
+console.log(x)
+// console.log(y)  <-- error
+console.log(y*2)
+
+
+
+let str1 = 'hola';
+const str2 = 'hola!';
+
+str1 = str1 + ' mundo'
+// str2 = str2 + 'hello' <-- errro
+
+
+console.log(str1)
+console.log(str2+str1)
+console.log(str2+str2)
