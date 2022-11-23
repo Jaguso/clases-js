@@ -352,6 +352,7 @@ if (5>x>0) {
 
 var x = 20;
 
+
 switch(x) {
     case 0<x<5:
         console.log(x);
@@ -403,3 +404,35 @@ str1 = str1 + ' mundo'
 console.log(str1)
 console.log(str2+str1)
 console.log(str2+str2)
+
+
+///////////////////////////////////
+
+// LOOPS
+
+// i++ es lo mismo que i = i+1
+
+for (let i=0; i<6; i++) {
+    console.log(i)
+}
+
+
+// Imprimir los numeros menores que 10 que sean pares
+
+let number = 131;
+// 12%2 --> 0
+// 11%2 --> 1
+
+console.log(number%2)
+
+// Cómo escribirmo en un booleano que la variable n sea par
+// n%2 === 0 tiene que ser true
+
+for (let i=0; i<11; i++) {
+    if (i%2 === 0) {
+        console.log(i)
+    }
+}
+
+// Tarea: Hacer el mismo ejemplo pero que imprima solo los impares
+
