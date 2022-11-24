@@ -482,3 +482,7 @@ for (let i=0; i<arr.length; i++) {
     console.log(arr[i])
 }
 
+// Tarea: Tomar 
+// let arr = ['manzana', 'naranja', 'platano', 'jitomate'];
+// e imprimir todos sus elementos agregando un guión al principio, ejem "-manzana",
+// usar las dos notaciones que vimos
