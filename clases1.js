@@ -425,7 +425,7 @@ let number = 131;
 
 console.log(number%2)
 
-// Cómo escribirmo en un booleano que la variable n sea par
+// Cómo escribirmos en un booleano que la variable n sea par
 // n%2 === 0 tiene que ser true
 
 for (let i=0; i<11; i++) {
@@ -435,4 +435,50 @@ for (let i=0; i<11; i++) {
 }
 
 // Tarea: Hacer el mismo ejemplo pero que imprima solo los impares
+
+for (let i=0; i<11; i++) {
+    if (i%2 === 1) {
+        console.log(i)
+    }
+}
+
+// 
+
+for (let i=0; i<11; i++) {
+    if (i%2 === 0) {
+        console.log(i)
+    }
+}
+
+
+for (let i=0; i<11; i++) {
+    if (i%2 !== 1) {
+        console.log(i)
+    }
+}
+
+for (let i=0; i<11; i=i+2) {
+    console.log(i)
+}
+
+
+// otra notación para for loops
+
+let arr = ['manzana', 'naranja', 'platano', 'jitomate'];
+
+for (let item of arr) {
+    console.log(item)
+}
+
+for (let item of arr) {
+    item = item + '-';
+    console.log(item)
+}
+
+// Lo mismo con la notación anterior
+
+let arr = ['manzana', 'naranja', 'platano', 'jitomate'];
+for (let i=0; i<arr.length; i++) {
+    console.log(arr[i])
+}
 
