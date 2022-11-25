@@ -486,3 +486,26 @@ for (let i=0; i<arr.length; i++) {
 // let arr = ['manzana', 'naranja', 'platano', 'jitomate'];
 // e imprimir todos sus elementos agregando un guión al principio, ejem "-manzana",
 // usar las dos notaciones que vimos
+
+let arr = ['manzana', 'naranja', 'platano', 'jitomate'];
+for (let i=0; i<arr.length; i++) {
+    arr[i] = '-' + arr[i];
+    console.log(arr[i]);
+}
+
+// Dado un arreglo de strings de longitud mayor o igual a 3, imprimir todos los strings 
+// de forma que se quiten sus primeras dos letras
+
+let arr = ['luis', 'tomate', 'manzana', 'pedro', 'juan']
+
+let str = 'aqwe woeij weijf 123'
+console.log(str[str.length-1])
+
+
+for (let item of arr) {
+    console.log(item.slice(2, item.length))
+}
+
+
+// Tarea: 1) Hacer lo mismo con la otra notación.
+// 2) Tienes un arreglo de strings (letras nadamás), imprimir cada string con todas sus letras mayúsculas.
