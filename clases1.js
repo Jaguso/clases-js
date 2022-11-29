@@ -509,3 +509,35 @@ for (let item of arr) {
 
 // Tarea: 1) Hacer lo mismo con la otra notación.
 // 2) Tienes un arreglo de strings (letras nadamás), imprimir cada string con todas sus letras mayúsculas.
+
+// 1)
+let arr = ['luis', 'tomate', 'manzana', 'pedro', 'juan'];
+
+for (let i=0; i<arr.length; i++) {
+    console.log(arr[i].slice(2, arr[i].length))
+}
+
+// i++ es lo mismo que i = i+1
+
+// While loops
+// Se tiene que definir cómo cambiar i para que la condición se haga false eventualmente
+
+let i = 2;
+while(i<10) {
+    console.log(i)
+    // i = 23
+    i = i+2
+}
+
+////////////////////////////////////
+
+// FUNCIONES
+
+// Una funcion tiene INPUT y OUTPUT
+
+function addTwo(x) {
+    return x + 2;
+}
+
+console.log(addTwo(23))
+console.log(addTwo(5))
