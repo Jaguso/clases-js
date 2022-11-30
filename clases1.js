@@ -541,3 +541,41 @@ function addTwo(x) {
 
 console.log(addTwo(23))
 console.log(addTwo(5))
+
+
+// una función util para arreglos es .push() - agrega un elemento al final del arreglo
+let arr = [123, 'owie', 'juan', 'manzana']
+arr.push([1,2,0,12,11])
+console.log(arr)
+
+
+function addLine(arr) {
+    let finalArr = [];
+    for (let item of arr) {
+        item = '-' + item;
+        finalArr.push(item);
+    }
+    return finalArr;
+}
+
+console.log(addLine(['woiejw', 'woeiw', 'wo2', 'pedro']))
+
+
+// Definir una función que de entrada tenga un arreglo de strings y de salida
+// un arreglo de los mismos strings pero en mayúsculas.
+
+function arrayToUppercase(arr) {
+    let finalArr = [];
+    for (let item of arr) {
+        item = item.toUpperCase();
+        finalArr.push(item)
+    }
+    return finalArr;
+}
+
+console.log(arrayToUppercase(['eiwo owie', 'Woiwem', 'osidenn']))
+
+
+
+// Tarea: Definir una función que de input tenga un entero positivo y de output, eleve al cuadrado el 
+// número si es mayor que 5 o regrese el mismo número si es menor o igual a 5
