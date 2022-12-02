@@ -579,3 +579,57 @@ console.log(arrayToUppercase(['eiwo owie', 'Woiwem', 'osidenn']))
 
 // Tarea: Definir una función que de input tenga un entero positivo y de output, eleve al cuadrado el 
 // número si es mayor que 5 o regrese el mismo número si es menor o igual a 5
+
+function squarePlusFive(n) {
+    if (n>5) {
+        return n**2; // es lo mismo que n*n
+    } 
+    return n;
+}
+
+console.log(squarePlusFive(7))
+console.log(squarePlusFive(3))
+
+
+//
+
+function test(str) {
+    if (str.length > 2) {
+        str = str + '/';
+    } else {
+        str = '*/';
+    }
+    return str;
+
+    // también se puede solucionar de esta manera
+    // if (str.length > 2) {
+    //     return str + '/';
+    // }
+    // return '*/';
+}
+
+console.log(test('owiejfwoei'))
+console.log(test('p2'))
+
+//////
+// Arrow functions (otra notación para funciones)
+
+// Una función que tenga un entero de input y de output el entero multiplicado por 2
+
+// Notación tradicional
+function duplicate(n) {
+    return n*2;
+}
+
+// Con notación de arrow function
+const duplicate = (n) => {
+    return n*2;
+}
+console.log(duplicate(4))
+
+// Una variación de la notación
+const duplicate = (n) => (n*2);
+console.log(duplicate(3))
+
+
+// Tarea: Reescribir la función de test, con notación de arrow function.
