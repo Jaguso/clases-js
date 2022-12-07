@@ -633,3 +633,42 @@ console.log(duplicate(3))
 
 
 // Tarea: Reescribir la función de test, con notación de arrow function.
+
+
+///////////////////////
+
+// '232394' -> '223349' ejercicio pendiente
+
+
+
+// .split() - Sirve para convertir un string en un array
+
+const str = 'weoi';
+console.log(str.split('')) // -> ['w', 'e', 'o', 'i']
+
+
+// .join() - Convierte arrays a strings
+
+const arr = ['t', 'e', 's', 't']
+console.log(arr.join(''))
+
+
+// Ejercicio: Escribir una función que tenga de entrada un sting y de salida
+// el mismo string en camel case
+
+// 'el mundo DE soMia'
+
+
+const toCamelcase = (str) => {
+    str.toLowerCase();
+    for (let i=0; i<str.length; i++) {
+        if (str[i] === ' ') {
+            str[i+1].toUpperCase();
+        }
+    }
+    return str;
+}
+
+console.log(toCamelcase(' pa la banda'))
+
+
