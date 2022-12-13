@@ -660,15 +660,28 @@ console.log(arr.join(''))
 
 
 const toCamelcase = (str) => {
-    str.toLowerCase();
-    for (let i=0; i<str.length; i++) {
-        if (str[i] === ' ') {
-            str[i+1].toUpperCase();
+    let strUpdated = str.toLowerCase();
+    let arr = strUpdated.split(' ');
+    let strAccumulator = "";
+    for (let i=0; i<arr.length; i++) {
+        if (i !== 0) {
+            let newWord = arr[i][0].toUpperCase() + arr[i].slice(1, arr[i].length);
+            strAccumulator = strAccumulator + newWord;
+        } else {
+            strAccumulator = strAccumulator + arr[i];
         }
     }
-    return str;
+    return strAccumulator;
 }
 
-console.log(toCamelcase(' pa la banda'))
+
+
+
+// 'oisd siod swioejf ISD ioas AI ia' -> ['siod', 'sd', 'soid', ...] -> ['siod', 'Sd', 'Soid', ...] -> usamos .join()
+
+
+// 'chichis pa la banda' -> 'chichisPaLaBanda'
+
+console.log(toCamelcase('OI soid WIpa la banda'))
 
 
