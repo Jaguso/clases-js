@@ -658,13 +658,22 @@ console.log(arr.join(''))
 
 // 'el mundo DE soMia'
 
+// let str = "test string" 
+// str.slice(índice donde empezamos a cortar, índice uno despues de donde terminamos de cortar)
+// El ultimo elemento del string tiene indice str.length-1
+
 
 const toCamelcase = (str) => {
     let strUpdated = str.toLowerCase();
     let arr = strUpdated.split(' ');
     let strAccumulator = "";
+    // "" + "siod"
+    // strAccumulator = "siod"
+    // strAccumulator = "siod" + "Luis" -> "soidLuis"
     for (let i=0; i<arr.length; i++) {
         if (i !== 0) {
+            // arr[i] = 'luis' -> 'Luis'
+            // 'luis' -> 'L' + 'uis'
             let newWord = arr[i][0].toUpperCase() + arr[i].slice(1, arr[i].length);
             strAccumulator = strAccumulator + newWord;
         } else {
@@ -685,3 +694,35 @@ const toCamelcase = (str) => {
 console.log(toCamelcase('OI soid WIpa la banda'))
 
 
+// EJERCICIIO
+// Summation
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive
+// integer greater than 0.
+
+// Definir una función que encuentre la suma de los número del 1 a num
+
+// For example (Input -> Output):
+
+// 2 -> 3 (1 + 2)
+// 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+function summation(num) {
+    let count = 0;
+    // for (queremos que encada iteración sumemos un numero del 1 al n a count)
+    for (let i=1; i<=num; i++) {
+        count = count + i;
+    }
+    return count;
+}
+
+summation(3)
+
+
+
+const summation = function(num) {
+
+}
+
+const summation = (num) => {
+
+}
