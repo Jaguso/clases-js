@@ -726,3 +726,27 @@ const summation = function(num) {
 const summation = (num) => {
 
 }
+
+
+/////////////////
+
+// Ejercicio
+// Write a function consonantCount, consonant_count or ConsonantCount that takes a string of English-language 
+// text and returns the number of consonants in the string.
+// Consonants are all letters used to write English excluding the vowels a, e, i, o, u.
+
+// input: 'manuel gonzalez' --> output: 8
+
+function consonantCount(str) {
+    let count = 0;
+    let newString = str.toLowerCase()
+    for (let i=0; i<newString.length; i++) {
+        if (!(newString[i] === 'a' || newString[i] === 'e'|| newString[i] === 'i' || newString[i] === 'o' || newString[i] === 'u')) {
+            count = count + 1
+        }
+    }
+    return count;
+}
+
+
+console.log(consonantCount('odifdfoidf'))
