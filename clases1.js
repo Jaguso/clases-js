@@ -727,6 +727,17 @@ const summation = (num) => {
 
 }
 
+////////////
+// Método .includes() - funciona en strings y arrays
+
+let str = 'abc';
+str.includes('b') // --> true si 'b' está dentro de str o false si no
+
+let arr = [2,3,4,78,12]
+arr.includes(44) 
+
+
+
 
 /////////////////
 
@@ -748,5 +759,21 @@ function consonantCount(str) {
     return count;
 }
 
+// otra solución más general:
 
-console.log(consonantCount('odifdfoidf'))
+function consonantCount(str) {
+    let newString = str.toLowerCase();
+    let consonantsStr = 'bcdfghjklmnpqrstvwxyz';
+    let count = 0;
+    for (let character of newString) {
+        if (consonantsStr.includes(character)) {
+            count = count + 1;
+        }
+    }
+    return count;
+
+}
+
+
+
+console.log(consonantCount('dd@234)(/&&/))=¨*][]__--- iioo'))

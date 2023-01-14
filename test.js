@@ -1,13 +1,17 @@
+
 function consonantCount(str) {
+    let newString = str.toLowerCase();
+    let consonantsStr = 'bcdfghjklmnpqrstvwxyz';
     let count = 0;
-    let newString = str.toLowerCase()
-    for (let i=0; i<newString.length; i++) {
-        if (!(newString[i] === 'a' || newString[i] === 'e'|| newString[i] === 'i' || newString[i] === 'o' || newString[i] === 'u')) {
-            count = count + 1
+    for (let character of newString) {
+        if (consonantsStr.includes(character)) {
+            count = count + 1;
         }
     }
     return count;
+
 }
 
 
-console.log(consonantCount('diiiiiiiaaaaAaDrrded'))
+
+console.log(consonantCount('dd@234)(/&&/))=¨*][]__--- iioo'))
