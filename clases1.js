@@ -650,7 +650,7 @@ console.log(str.split('')) // -> ['w', 'e', 'o', 'i']
 // .join() - Convierte arrays a strings
 
 const arr = ['t', 'e', 's', 't']
-console.log(arr.join(''))
+console.log(arr.join('')) // -> 'test' 
 
 
 // Ejercicio: Escribir una función que tenga de entrada un sting y de salida
