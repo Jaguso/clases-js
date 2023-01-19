@@ -3,6 +3,7 @@
 
 // length
 // Sirve para calcular la cantidad de caracteres de un string
+let word = 'abcd';
 console.log(word.length) // --> 4 (la longitud de word)
 
 // toUpperCase()
@@ -17,6 +18,13 @@ console.log(word.toUpperCase())
 var str = 'Pepe Pecas Pica Papas'
 console.log(str.toLowerCase())
 str.toLowerCase() // pepe pecas pica papas
+
+
+// Podemos usar la notación de corchete [], para acceder al caracter en cierto índice del string
+let str = 'abcdefg'
+str[0] // -> 'a'
+str[4] // -> 'e'
+
 
 // Con + se concatena (pega strings)
 var str1 = 'Jose es '
@@ -33,17 +41,35 @@ console.log(str.slice(0,3)) // --> 'Jua'
 console.log(str.slice(2,5))
 
 
-// includes()
+// .includes()
 // Es un booleano, pregunta si un caracter está en un string o no y regresa true o false
-
 var letters = 'abcdefghij'
 letters.includes('a') // --> true
 letters.includes('p') // --> false
 
 
+// .indexOf() 
+// Te dice el índice de un caracter en un string, o regresa -1 si el caracter no está en el string
+let str = 'abcdefg';
+str.indexOf('c') // -> 2
+str.indexOf('z') // -> -1
+str.indexOf('c', 3) // -> -1
+
+
+// OBS: Con .indexOf() también podemos pregunatar si un caracter está o no en un string
+
+function isCharInWord(word, character) {
+    if (word.indexOf(character) === -1) {
+        return false;
+    } else {
+        return word.indexOf(character);
+    }
+} 
+
+console.log(isCharInWord('lapiz', 'a'))
+
 // .split() 
 // Sirve para convertir un string en un array
-
 const str = 'weoi';
 console.log(str.split('')) // -> ['w', 'e', 'o', 'i']
 
@@ -56,7 +82,6 @@ let alfa = 'abcdefghij' // alfa[0] es 'a', alfa[1] es 'b' etc.
 
 
 // Se pueden hacer for loops en strings
-
 let str = 'azul'
 for (let i=0; i<str.length; i++) {
     console.log(str[i])
@@ -64,10 +89,22 @@ for (let i=0; i<str.length; i++) {
 
 
 
+// Idea del acumulador para strings 
 
+
+////////////////////////////////////////////////////////////////////////
 // ARRAYS
 
-// Cómo acceder a un elemento de un arreglo
+// OBS: Las entradas de un array pueden ser cualquier tipo de data, incluso otro array
+let arr = [2, 'pedro', [2,3,['a', 'abc']], 'd']
+
+// length
+// En arrays también podemos usar .length, que cuenta el número de elementos del array
+let arr = [23, 4, 2, 45];
+console.log(arr.length) // --> 4
+
+
+// Con la notación de corchete [] podemos acceder a elementos del array:
 var arr = ['Jose', 11, 'Luis', 14, 2, 5]
 arr[2] // --> 'Luis'
 arr[0] // --> 'Jose'
@@ -75,14 +112,15 @@ arr[0] // --> 'Jose'
 console.log(arr[2])
 console.log(arr[0])
 
+let arr = [2, 'pedro', [2,3,['a', 'abc']], 'd']
+console.log(arr[2]) // -> [2,3,['a', 'abc']]
+console.log(arr[2][0]) // -> 2
+console.log(arr[2][2]) // -> [ 'a', 'abc' ]
+console.log(arr[2][2][0]) // -> 'a'
+console.log(arr[2][2][1][1]) // -> 'b'
 
-// length - calcula la longitud del arreglo
-var arr = ['Jose', 11, 'Luis', 14, 2, 5]
-arr.length // --> 6
-console.log(arr.length)
 
 // "+" toma dos arreglos, los junta y hace todo un string 
-
 var arr1 = ['Jose', 11, 'Luis', 14, 2, 5]
 var arr2 = ['manzana', 'pera', 2]
 
