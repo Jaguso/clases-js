@@ -30,8 +30,8 @@ str[4] // -> 'e'
 var str1 = 'Jose es '
 var str2 = 'alto'
 
-console.log(str1 + str2)
-
+console.log(str1 + str2) // -> 'Jose es alto'
+ 
 
 // slice()
 // Sirve para cortar un string, la notación funciona así: 
@@ -70,6 +70,7 @@ console.log(isCharInWord('lapiz', 'a'))
 
 // .split() 
 // Sirve para convertir un string en un array
+// Strings --> Arrays
 const str = 'weoi';
 console.log(str.split('')) // -> ['w', 'e', 'o', 'i']
 
@@ -124,7 +125,6 @@ console.log(arr[2][2][1][1]) // -> 'b'
 var arr1 = ['Jose', 11, 'Luis', 14, 2, 5]
 var arr2 = ['manzana', 'pera', 2]
 
-
 arr1 + arr2 // --> Jose,11,Luis,14,2,5manzana,pera,2   y es un string
 console.log(arr1+arr2)
 
@@ -140,7 +140,6 @@ console.log(arr2.concat(arr1))
 
 
 // .slice() funciona igual para arrays que para strings
-
 var arr = ['Jose', 11, 'Luis', 14, 2, 'pera']
 arr.slice(0,5) // --> ['Jose', 11, 'Luis', 14, 2]
 arr.slice(1,4) // --> [11, 'Luis', 14]
@@ -148,21 +147,52 @@ console.log(arr.slice(0,5))
 console.log(arr.slice(1,4))
 
 
+// .includes() funciona igual que en strings
+var arr = [2, 3, 'pedro', 'manzana', 12]
+console.log(arr.includes(2)) // -> true
+console.log(arr.includes(15)) // -> false
+
 
 // .indexOf() te dice que índice tiene un elemento del arreglo
 var arr = ['Jose', 11, 'Luis', 14, 2, 'pera']
 arr.indexOf('Luis') // --> 2
-console.log(arr.indexOf(11)) // -->1
+console.log(arr.indexOf(11)) // --> 1
 console.log(arr.indexOf('pera')) // --> 5
+console.log(arr.indexOf(23)) // --> -1
 
 // si un valor se repite, arroja el índice de la primera vez que aparece
 var arr = ['Jose', 11, 'Luis', 14, 2, 'pera', 'Jose']
-console.log(arr.indexOf('Jose'))
+console.log(arr.indexOf('Jose')) // -> 0
 
 
 // .join() 
 // Sirver para convertir arrays a strings
+// Arrays --> Strings
 const arr = ['t', 'e', 's', 't']
 console.log(arr.join('')) // -> 'test'
 console.log(arr.join('-')) // -> 't-e-s-t'
 console.log(arr.join('.')) // -> 't.e.s.t'
+
+let arr = ['pepe', 'pecas', 'pica', 'papas']
+console.log(arr.join('')) // -> 'pepepecaspicapapas'
+console.log(arr.join(' ')) // -> 'pepe pecas pica papas'
+
+// .push()
+// agrega elementos al final de un arreglo
+let arr = ['pepe', 'pecas', 'pica', 'papas']
+arr.push(45)
+console.log(arr) // -> [ 'pepe', 'pecas', 'pica', 'papas', 45 ]
+
+// .unshift()
+// agrega elementos al inicio de un arreglo
+let arr = ['pepe', 'pecas', 'pica', 'papas']
+arr.unshift(45)
+console.log(arr) // -> [ 45, 'pepe', 'pecas', 'pica', 'papas' ]
+
+
+
+// Idea del acumulador
+
+
+
+// Falta ver .pop() .shift() .unshift() .sort() .map() .filter()
