@@ -89,8 +89,23 @@ for (let i=0; i<str.length; i++) {
 } // ---> 'a' 'z' 'u' 'l' 
 
 
-
 // Idea del acumulador para strings 
+
+let str = ''; // <-- éste es nuestro acumuldador
+let str2 = 'abcdefghijkl'
+for (let i=0; i<str2.length; i++) {
+    str = str + str2[i]
+}
+console.log(str)
+
+// ejemplo
+// Escribir una función que convierta espacios en giones
+// 'pepe pecas pica papas' --> 'pepe-pecas-pica-papas'
+
+const spaceToDash = (str) => {
+    
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -193,6 +208,32 @@ console.log(arr) // -> [ 45, 'pepe', 'pecas', 'pica', 'papas' ]
 
 // Idea del acumulador
 
+let arr = [];
+let arr2 = [1,2,3,4,10,44,11,9]
+
+for (let i=0; i<arr2.length; i++) {
+    arr.push(arr2[i])
+}
+
+console.log(arr)
+
+// ejemplos:
+// Escribir una función que de input tenga un arreglo y de output solo los numeros pares de ese mismo arreglo
+
+function pares(arr) {
+    let accum = [];
+    for (let i=0; i<arr.length; i++) {
+        if (arr[i]%2 === 0) {
+            accum.push(arr[i]);
+        }
+    }
+    return accum;
+}
+
+console.log(pares([1,2,3,4,10,44,11,9]))
 
 
-// Falta ver .pop() .shift() .unshift() .sort() .map() .filter()
+// Tarea: investigar estos métodos de arreglos (array methods) .pop() .shift() .sort() 
+
+
+// .map() .filter()
