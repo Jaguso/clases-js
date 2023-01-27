@@ -89,22 +89,39 @@ for (let i=0; i<str.length; i++) {
 } // ---> 'a' 'z' 'u' 'l' 
 
 
+// Notación (sintaxis)
+character = character + 'we';
+character += 'we'
+
+
 // Idea del acumulador para strings 
 
 let str = ''; // <-- éste es nuestro acumuldador
 let str2 = 'abcdefghijkl'
 for (let i=0; i<str2.length; i++) {
-    str = str + str2[i]
+    str += str2[i]
 }
 console.log(str)
+
 
 // ejemplo
 // Escribir una función que convierta espacios en giones
 // 'pepe pecas pica papas' --> 'pepe-pecas-pica-papas'
 
 const spaceToDash = (str) => {
-    
+    let accum = '';
+    for (let character of str) {
+        if (character === ' ') {
+            accum += '-';
+        } else {
+            accum += character;
+        }
+    }
+    return accum;
 }
+
+console.log(spaceToDash('pepe pecas pica papas'))
+
 
 
 
