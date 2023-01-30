@@ -1,14 +1,13 @@
-
-const spaceToDash = (str) => {
-    let accum = '';
-    for (let character of str) {
+function spaceToDash(str) {
+    let arr = str.split('');
+    return arr.map(character => {
         if (character === ' ') {
-            accum += '-';
-        } else {
-            accum += character;
+            return '-';
         }
-    }
-    return accum;
+        return character;
+    })
+    
 }
 
-console.log(spaceToDash('pepe pecas pica papas'))
+console.log(spaceToDash('ssbb sdoi s'))
+

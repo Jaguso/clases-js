@@ -253,4 +253,41 @@ console.log(pares([1,2,3,4,10,44,11,9]))
 // Tarea: investigar estos métodos de arreglos (array methods) .pop() .shift() .sort() 
 
 
-// .map() .filter()
+// .map() - se aplica siempre a un arreglo y regresa otro arreglo, con cada elemento modificado por una arrow function.
+
+// [1,3,4,0,2] --> [1,9,16,0,4]
+
+// Ejemplo
+// Elevar al cuadrado todos los elementos de un arreglo de numeros 
+let arr = [2,3,5,7,12];
+arr.map(element => (element*element)) // -> [ 4, 9, 25, 49, 144 ]
+
+
+// Elevar al cubo todos los numero pares y los impares dejarlos igual
+let arr = [2,3,5,7,12];
+arr.map(element => {
+    if (element%2 === 0) {
+        return element**3;
+    }
+    return element;
+});
+
+// Ejemplo
+// Escribir una función que convierta espacios en giones
+// 'pepe pecas pica papas' --> 'pepe-pecas-pica-papas'
+
+function spaceToDash(str) {
+    let arr = str.split('');
+    return arr.map(character => {
+        if (character === ' ') {
+            return '-';
+        }
+        return character;
+    })
+    
+}
+
+console.log(spaceToDash('ssbb'))
+
+
+// .map() .forEach() .filter() 
